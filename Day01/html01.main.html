@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--한국어를 기본으로 함-->
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>첫번째 웹페이지</title> <!--유일하게 화면에 표시됨-->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+    <style> 
+        h1
+        {
+            color:floralwhite;
+            background-color: coral;
+        }
+    </style> <!--스타일시트-->
+    <script> // 자바스크립트
+        alert("Hello, HTML5!");
+    </script>
+</head>
+<body>
+    <h1> <!--대소문자 구분없으나 거의 소문자-->
+        Hello, H1
+    </h1>
+    <h2>Hello, H2</h2>
+    <h3>Hello, H3</h3>
+    <h4>Hello, H4</h4>
+    <h5>Hello, H5</h5>
+    <h6>Hello, H6</h6>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi maiores repellat in mollitia ex esse labore, alias tempore adipisci quas consequuntur provident assumenda officia, incidunt omnis, pariatur ipsa minima velit! Debitis totam incidunt blanditiis est similique, dicta nam. Tempore, vel. In dolor sapiente delectus? Est rem expedita libero quam sint.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, atque.</p> <!--문장--> 
+    <br><br><br>
+
+    <div> <!--다른 요소를 담을 수 있는 태크 (화면상에 별도 표시는 없음)-->    
+        <h2>TEST</h2>
+        <hr>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat voluptates iste! Soluta ut non quae! Sapiente omnis, voluptatum animi sit corrupti fuga aut eveniet exercitationem qui quae sequi nostrum ab quaerat minus itaque temporibus praesentium expedita obcaecati est officiis. At reiciendis iure mollitia neque. Corrupti praesentium labore atque! Accusamus, fugiat odio beatae amet perspiciatis necessitatibus libero nesciunt fugit, a quasi voluptate iure facilis suscipit laudantium, pariatur debitis aut eos quae placeat magnam soluta explicabo assumenda odit. Quidem fugiat recusandae possimus ipsam fugit, quis obcaecati molestias asperiores perspiciatis provident libero accusamus earum ratione, dicta illum reprehenderit nostrum temporibus cupiditate quae?</P>
+    </div>
+    <div></div>
+
+    <h1 title="header">My Title</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg" width="500">
+
+    <!--여기는 주석입니다. xml, wpf xaml 과 동일-->
+    <h3>앵커태그</h3>
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+    <a href="https://www.google.com" target="_self">구글</a>
+    <a href="https://www.youtube.com">유튜브</a>
+
+    <a href="./image1.jpg">슬램덩크</a> <!--상대경로-->
+    <a href="C:/source/pknu_aspnet_2023/Day01/image1.jpg">슬램덩크</a> <!--절대경로-->
+</body>
+</html>
