@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Grid Layout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+    <style>
+        #wrap
+        {
+            display: grid; /*그리드 레이아웃 사용*/
+            grid-template-columns: repeat(3, 1fr); /*fr(배율) 1* */
+            grid-template-rows: 1fr 2fr; /* 1* 2* */
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .item
+        {
+            padding: 10px;
+            background-color: thistle;
+        }
+        .item:nth-child(2n+1)
+        {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+        <dix class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, eum.</dix>
+    </div>
+</body>
+</html>
