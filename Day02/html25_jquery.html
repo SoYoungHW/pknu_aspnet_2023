@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // 여기에 로직을 적으면 됩니다.
+            var count = 0;
+            var run = $('#run')
+            var frames = ['./Images/0.png',
+                          './Images/1.png',
+                          './Images/2.png',
+                          './Images/3.png',
+                          './Images/4.png',
+                          './Images/5.png',
+                          './Images/6.png',
+                          './Images/7.png',
+                          './Images/8.png',
+                          './Images/9.png',
+                          './Images/10.png',
+                          './Images/11.png',
+                          './Images/12.png',
+                          './Images/13.png',
+                          './Images/14.png']
+            // 타이머반복
+            setInterval(function() 
+            {
+              $('#run').attr('src', frames[count]);
+              count += 1;
+              if (count > 14) count = 0;
+            }, 1000/20);
+        })
+    </script>
+</head>
+<body>
+    <img id="run" src="./Images/0.png">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    ntegrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // 여기에 로직을 적으면 됩니다.
+            $('input').click(function()
+            {
+                $('.page').slideToggle('1000');
+            });
+
+            $('.box').css({
+                width: '100px',
+                height: '100px',
+                backgroundColor: 'lightsalmon'
+            }).delay(1000)
+            .animate({
+                width: '500px',
+                opacity: 0.5
+            }, 1500);
+         
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="Toggle">
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor harum libero nesciunt culpa omnis, et quod vitae, non deleniti maxime porro sunt in velit error iusto quas pariatur? Quos libero ipsa iste vel eligendi necessitatibus est quis temporibus, hic ullam quisquam sequi harum, consectetur quidem blanditiis laudantium quam dolor cumque atque commodi dignissimos. Tenetur nobis odit tempora quo veniam assumenda odio. Sint optio eius placeat rem laboriosam vero iure, impedit consectetur ad id temporibus aliquam ipsum, suscipit ipsam, earum deleniti ut sit similique corrupti. Ea molestias ipsa ipsam nihil possimus eveniet, consequuntur ducimus voluptate explicabo fugit natus corrupti sit.</p>
+    </div>
+    <div class="box"></div>
+</body>
+</html>

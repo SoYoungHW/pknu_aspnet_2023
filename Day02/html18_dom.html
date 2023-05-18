@@ -8,18 +8,18 @@
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script> -->
     <script>
-        window.onload = function()
+        window.onload = function(event)
         {
-            var image = document.getElementById('image');
-
-            image.src = 'https://picsum.photos/640/300';
-            image.width = 700;
-            image.height = 400;
-            // img 객체에 접근, js에서 source값과 속성을 변경
+            var button = document.querySelector('input');
+            button.onclick = function(ev)
+            {
+                alert('Click');
+            }
+            alert(event);
         }
     </script>
 </head>
 <body>
-    <img id="image">
+    <input type="button" value="클릭"></button>
 </body>
 </html>

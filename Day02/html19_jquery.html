@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+    <!-- <script src="./js/jquery-3.7.0.min.js"> -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+        ntegrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+        crossorigin="anonymous"></script>
+        <script>
+        window.onload = function()
+        {
+            // 전통 자바스크립트로 온로드 할때 방식
+            var headers = document.querySelectorAll('h1')
+            for (i = 0; i < headers.lenght; i++)
+            {
+                var header = headers[i];
+                header.style.backgroundColor = 'skyblue';
+                header.style.Color = 'gray';
+            }
+        }
+        
+        $(document).ready(function()
+        {
+            // jQuery로 온로드할때 방식
+            $('h1').css('color', 'white');
+            $('h1').css('background-color', 'pink');
+
+            var src= $('script').attr('src');
+            console.log(src);
+            var int = $('script').attr('crossorigin');
+            console.log(int);
+        })
+    </script>
+</head>
+<body>
+    <h1>Title</h1>
+    <h1>Title</h1>
+    <h1>Title</h1>
+</body>
+</html>
