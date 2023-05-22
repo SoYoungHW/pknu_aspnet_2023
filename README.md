@@ -33,3 +33,10 @@ ASP.NET 학습 리포지토리
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/pinterest.png" width="800">
 
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/pinterest2.png" width="700">
+
+## 4일차
+- ASP.NET MVC
+	- ASP.NET 기본
+	- ASP.NET 프로젝트 시작
+
+ASP.NET Core MVC 게시판
