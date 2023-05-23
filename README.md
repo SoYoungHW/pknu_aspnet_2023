@@ -38,5 +38,13 @@ ASP.NET 학습 리포지토리
 - ASP.NET MVC
 	- ASP.NET 기본
 	- ASP.NET 프로젝트 시작
+		
 
-ASP.NET Core MVC 게시판
+## 5일차
+- ASP.NET MVC
+	- 게시판 페이징까지
+	
+< ASP.NET Core MVC 게시판 >
+
+<img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Board.png" width="700">
+	
