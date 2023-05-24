@@ -44,7 +44,16 @@ ASP.NET 학습 리포지토리
 - ASP.NET MVC
 	- 게시판 페이징까지
 	
-< ASP.NET Core MVC 게시판 >
+< 5일차 ASP.NET Core MVC 게시판 리스트 >
 
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Board.png" width="700">
+
+## 6일차
+- ASP.NET MVC
+	- 게시판 정리
+	- 계정 관리
+	
+< 6일차 ASP.NET Core MVC 게시판 >
+	
+<img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Web.gif" width="700">
 	
