@@ -1,0 +1,65 @@
+﻿@model IEnumerable<IdentityRole>
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService iAthorizationServiece
+@{
+    ViewData["Title"] = "권한목록";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-8">
+            <h4 class="text-primary">권한목록</h4>
+        </div>
+        <div class="col-4 text-end">
+        </div>
+    </div>
+</div>
+<hr />
+
+@if (Model.Any()) // 모델(권한)이 뭐라도 있으면
+{
+    <a class="btn btn-sm btn-primary mb-3" asp-controller="Admin" asp-action="CreateRole">
+        <i class="bi bi-pin-angle-fill"></i>&nbsp;권한생성
+    </a>
+
+    foreach (var role in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                권한아이디 : @role.Id
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    @role.Name
+                </h5>
+                <div class="card-footer">
+                    <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                        <a class="btn btn-sm btn-primary" asp-controller="Admin" asp-action="EditRole"
+                         asp-route-id="@role.Id">
+                            <i class="bi bi-pen"></i>&nbsp;권한편집
+                         </a>
+                         @*<button type="submit" class="btn btn-sm btn-danger">
+                             <span class="bi bi-trash3"></span>&nbsp;권한삭제
+                         </button>   // Admin/User 등의 권한 자체를 삭제하는 것은 로직적으로 불합리합니다 *@
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+}
+else // 권한목록이 없으면
+{
+    <div class="card mb-3">
+        <div class="card-header">
+            권한목록이 없습니다.
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                아래의 권한생성 버튼을 눌러주세요.
+            </h5>
+            <a class="btn btn-sm btn-primary mb-3" asp-controller="Admin" asp-action="CreateRole">
+                <i class="bi bi-pin-angle-fill"></i>&nbsp;권한생성
+            </a>
+        </div>
+    </div>
+}

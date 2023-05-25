@@ -35,13 +35,13 @@ ASP.NET 학습 리포지토리
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/pinterest2.png" width="700">
 
 ## 4일차
-- ASP.NET MVC
+- ASP.NET Core MVC
 	- ASP.NET 기본
 	- ASP.NET 프로젝트 시작
 		
 
 ## 5일차
-- ASP.NET MVC
+- ASP.NET Core MVC
 	- 게시판 페이징까지
 	
 < 5일차 ASP.NET Core MVC 게시판 리스트 >
@@ -49,7 +49,7 @@ ASP.NET 학습 리포지토리
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Board.png" width="700">
 
 ## 6일차
-- ASP.NET MVC
+- ASP.NET Core MVC
 	- 게시판 정리
 	- 계정 관리
 	
@@ -57,3 +57,16 @@ ASP.NET 학습 리포지토리
 	
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Web.gif" width="700">
 	
+## 7일차
+- ASP.NET Core MVC
+	- 게시판 정리
+		- 아이디삭제, 게시글번호부여
+	- 권한관리
+		
+## 8일차
+- ASP.NET Core MVC
+	- 부트스트랩 테마 적용
+	
+- ASP.NET RestAPI
+- 개인포트폴리오
+	- 부트스트랩 테마 재적용
