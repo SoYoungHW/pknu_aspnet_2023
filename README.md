@@ -73,6 +73,13 @@ ASP.NET 학습 리포지토리
 - ASP.NET Core MVC
 	- 부트스트랩 테마 적용
 	
+	
+## 9일차
+- ASp.NET Core MVC
+	- 부트스트랩 seo_Dream 테마 완료
 - ASP.NET RestAPI
-- 개인포트폴리오
+	- RestAPI Server
+	- WPF Client
+	
+- 개인포트폴리오 웹
 	- 부트스트랩 테마 재적용
