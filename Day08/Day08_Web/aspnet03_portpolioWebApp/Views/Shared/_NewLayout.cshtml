@@ -53,30 +53,24 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a asp-controller="Home" asp-action="Index" class="active nanum-bold" 
-                                style="font-size:medium; font-family:NanumGothic;">홈</a></li>
-                            <li class="scroll-to-section"><a href="#features" class="nanum-bold" 
-                                style="font-size:medium; font-family:NanumGothic;">스킬</a></li>
-                            <li class="scroll-to-section"><a href="#about" class="nanum-bold" 
-                                style="font-size:medium; font-family:NanumGothic;">소개</a></li>
+                            <li class="scroll-to-section"><a asp-controller="Home" asp-action="Index" class="active nanum-bold" >홈</a></li>
+                            <li class="scroll-to-section"><a href="#features" class="nanum-bold" >스킬</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="nanum-bold" >소개</a></li>
                             @*<li class="scroll-to-section"><a href="#services">Services</a></li>*@
-                            <li class="scroll-to-section"><a href="#portfolio" 
-                                style="font-size:medium; font-family:NanumGothic;">포트폴리오</a></li>
-                            <li class="scroll-to-section"><a href="#contact" 
-                                style="font-size:medium; font-family:NanumGothic;">문의하기</a></li>
-                            <li class="scroll-to-section"><a asp-action="Index" asp-controller="Board" 
-                                style="font-size:medium; font-family:NanumGothic;">공지사항</a></li>
+                            <li class="scroll-to-section"><a href="#portfolio" class="nanum-bold">포트폴리오</a></li>
+                            <li class="scroll-to-section"><a href="#contact" class="nanum-bold">문의하기</a></li>
+                            <li class="scroll-to-section"><a asp-action="Index" asp-controller="Board" class="nanum-bold">공지사항</a></li>
                             @if (signInManager.IsSignedIn(User))
                             {
                                 @if (User.IsInRole("Admin"))
                                 {
-                                    <li class="scroll-to-section nanum-bold;">
-                                        <a asp-controller="Admin" asp-action="ListRoles">권한관리</a>
+                                    <li class="scroll-to-section">
+                                        <a asp-controller="Admin" asp-action="ListRoles" class="nanum-bold">권한관리</a>
                                     </li>
                                 }
                                 <li>
                                     <a class="scroll-to-section" asp-action="Profile" asp-controller="Account"
-                                       asp-route-userName="@userManager.GetUserName(User)">프로필</a>
+                                   asp-route-userName="@userManager.GetUserName(User)" class="nanum-bold">프로필</a>
                                 </li>
                                 <li class="scroll-to-section">
                                     <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
@@ -87,10 +81,10 @@
                             else
                             {
                                 <li class="scroll-to-section">
-                                    <a asp-controller="Account" asp-action="Register" style="font-family:NanumGothic">회원가입</a>
+                                    <a asp-controller="Account" asp-action="Register" class="nanum-bold">회원가입</a>
                                 </li>
                                 <li class="scroll-to-section">
-                                    <a asp-controller="Account" asp-action="Login" style="font-family:NanumGothic">로그인</a>
+                                    <a asp-controller="Account" asp-action="Login" class="nanum-bold">로그인</a>
                                 </li>
                             }
                         </ul>

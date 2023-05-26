@@ -20,17 +20,17 @@ body {
   margin-bottom: 60px;
 }
 
-nanum-bold {
+.nanum-bold {
     font-family: 'Nanum Gothic';
     font-weight: 800;
 }
 
-nanum-middle {
+.nanum-middle {
     font-family: 'Nanum Gothic';
     font-weight: 700;
 }
 
-nanum {
+.nanum {
     font-family: 'Nanum Gothic';
     font-weight: 400;
 }
