@@ -77,9 +77,19 @@ ASP.NET 학습 리포지토리
 ## 9일차
 - ASp.NET Core MVC
 	- 부트스트랩 seo_Dream 테마 완료
-- ASP.NET RestAPI
-	- RestAPI Server
-	- WPF Client
+		- 스크롤이 되는 화면 / 안되는 화면 메뉴 분리
+		- 포트폴리오 동적관리(이미지 업로드)
+
+		- IIS .net6.0 런타임 설치
+< 9일차 ASP.NET Core MVC 게시판 >
+
+<img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Web02.gif" width="700">
+		
+## 10일차			
+	- ASP.NET RestAPI
+		- OpenAPI(유사한 서비스)를 운영
+		- RestAPI Server
+		- WPF Client
 	
 - 개인포트폴리오 웹
 	- 부트스트랩 테마 재적용
