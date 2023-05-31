@@ -79,8 +79,8 @@ ASP.NET 학습 리포지토리
 	- 부트스트랩 seo_Dream 테마 완료
 		- 스크롤이 되는 화면 / 안되는 화면 메뉴 분리
 		- 포트폴리오 동적관리(이미지 업로드)
-
 		- IIS .net6.0 런타임 설치
+		
 < 9일차 ASP.NET Core MVC 게시판 >
 
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Web02.gif" width="700">
@@ -91,7 +91,7 @@ ASP.NET 학습 리포지토리
 	- RestAPI Server
 	- WPF Client
 		
-<RestAPI Server>
+< RestAPI Server >
 
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/restServer01.png" width="700">
 	
