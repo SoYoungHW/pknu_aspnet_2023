@@ -86,10 +86,10 @@ ASP.NET 학습 리포지토리
 <img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/Web02.gif" width="700">
 		
 ## 10일차			
-	- ASP.NET RestAPI
-		- OpenAPI(와 유사한 서비스)를 운영
-		- RestAPI Server
-		- WPF Client
+- ASP.NET RestAPI
+	- OpenAPI(와 유사한 서비스)를 운영
+	- RestAPI Server
+	- WPF Client
 		
 <RestAPI Server>
 
