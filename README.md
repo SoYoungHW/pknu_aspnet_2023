@@ -90,6 +90,10 @@ ASP.NET 학습 리포지토리
 		- OpenAPI(와 유사한 서비스)를 운영
 		- RestAPI Server
 		- WPF Client
+		
+<RestAPI Server>
+
+<img src="https://github.com/SoYoungHW/pknu_aspnet_2023/blob/main/images/restServer01.png" width="700">
 	
 - 개인포트폴리오 웹
 	- 부트스트랩 테마 재적용
