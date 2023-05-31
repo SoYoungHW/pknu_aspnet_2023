@@ -87,7 +87,7 @@ ASP.NET 학습 리포지토리
 		
 ## 10일차			
 	- ASP.NET RestAPI
-		- OpenAPI(유사한 서비스)를 운영
+		- OpenAPI(와 유사한 서비스)를 운영
 		- RestAPI Server
 		- WPF Client
 	

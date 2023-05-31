@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAPIServer", "TodoAPIServer\TodoAPIServer.csproj", "{F3410FFA-26A8-4394-9E71-CE165D71C64D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRentalShopAPI", "BookRentalShopAPI\BookRentalShopAPI.csproj", "{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3410FFA-26A8-4394-9E71-CE165D71C64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3410FFA-26A8-4394-9E71-CE165D71C64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3410FFA-26A8-4394-9E71-CE165D71C64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3410FFA-26A8-4394-9E71-CE165D71C64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A911DE4B-DF31-42EC-A32B-9E931D884C93}
+	EndGlobalSection
+EndGlobal
