@@ -10,6 +10,7 @@ namespace TodoAPIServer
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddCors(); // 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
                 builder.Configuration.GetConnectionString("DefaultConnection"),
                 ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
@@ -33,6 +34,8 @@ namespace TodoAPIServer
 
             app.UseAuthorization();
 
+            // 서버 CORS 사용허가
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.MapControllers();
 

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAPIServer", "TodoAPIServer\TodoAPIServer.csproj", "{F3410FFA-26A8-4394-9E71-CE165D71C64D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAPIServer", "TodoAPIServer\TodoAPIServer.csproj", "{F3410FFA-26A8-4394-9E71-CE165D71C64D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRentalShopAPI", "BookRentalShopAPI\BookRentalShopAPI.csproj", "{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRentalShopAPI", "BookRentalShopAPI\BookRentalShopAPI.csproj", "{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoItemWeb", "TodoItemWeb\TodoItemWeb.csproj", "{69F39F17-62EF-4E15-BC01-BBA1971AC4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93FA7C8-5EE6-4E15-B638-FE95DAE9A9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F39F17-62EF-4E15-BC01-BBA1971AC4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F39F17-62EF-4E15-BC01-BBA1971AC4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F39F17-62EF-4E15-BC01-BBA1971AC4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F39F17-62EF-4E15-BC01-BBA1971AC4D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
