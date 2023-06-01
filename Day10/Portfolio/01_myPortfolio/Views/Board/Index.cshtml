@@ -1,0 +1,75 @@
+﻿@model IEnumerable<_01_myPortfolio.Models.BoardModel>
+
+@{
+    ViewData["Title"] = "게시판";
+}
+
+@{
+    // * 게시판 구성 (HTML화면에서 사용하기 위해서 선언 = ViewData = TempData)
+        
+}
+
+
+
+<div style="padding: 50px;" class="mt-5;">
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-8">
+                <h4 class="text-primary">게시판 리스트</h4>
+            </div>
+            <div class="col-4 text-end">
+                <a asp-controller="Board" asp-action="Create" class="btn btn-primary">글쓰기</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReadCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReadCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

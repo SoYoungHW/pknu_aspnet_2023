@@ -1,3 +1,6 @@
+using _01_myPortfolio.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace _01_myPortfolio
 {
     public class Program
@@ -8,6 +11,12 @@ namespace _01_myPortfolio
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // * ApplicationContext 사용하기 위한 설정 추가 / 연결문자열 할당
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
+                builder.Configuration.GetConnectionString("DefaultConnection"),
+                ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+                ));
 
             var app = builder.Build();
 

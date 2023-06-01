@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--토스트메세지 창 js 라이브러리용 CSS-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <!--포트폴리오 사진 슬라이드를 위한 owl-->
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -29,7 +33,9 @@
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
+                        <li class="nav-item px-2" data-anchor="data-anchor">
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link fw-medium active" aria-current="page">Home</a>
+                        </li>
                         <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#board">Board</a></li>
                         <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">Contact</a></li>
@@ -65,7 +71,9 @@
         feather.replace();
     </script>
     <script src="~/themes/klean/public/assets/js/theme.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
