@@ -16,9 +16,9 @@ namespace _01_myPortfolio.Controllers
         public IActionResult Index()
         {
             ViewData["NoScroll"] = "true";
-            IEnumerable<BoardModel> objBoardList = _db.Boards.ToList();
+            IEnumerable<BoardModel> list = _db.Boards.ToList();
 
-            return View(objBoardList);
+            return View(list);
         }
 
         [HttpGet]
@@ -100,6 +100,7 @@ namespace _01_myPortfolio.Controllers
         public IActionResult DeletePost(int? Id)
         {
             var board = _db.Boards.Find(Id);
+
             if (board == null) { return NotFound(); }
 
             _db.Boards.Remove(board);
@@ -111,10 +112,21 @@ namespace _01_myPortfolio.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details()
+        public IActionResult Details(int? Id)
         {
             ViewData["NoScroll"] = "true";
-            return View();
+            
+            if(Id == null || Id == 0) { return NotFound(); }
+
+            var board = _db.Boards.Find(Id);
+
+            if(board == null) { return NotFound(); }
+
+            board.ReadCount++;
+            _db.Boards.Update(board);
+            _db.SaveChanges();
+
+            return View(board);
         }
     }
 }

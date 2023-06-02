@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewData["Title"] - IoT_Portfilo</title>
 
+    <!--Bootstrap 5 CDN-->
+    <link rel="stylesheet" href="~/themes/seo_dream/vendor/bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="~/themes/klean/public/assets/css/theme.css" />
     <link rel="stylesheet" href="~/themes/klean/public/assets/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/animated.css">
+    <link rel="stylesheet" href="~/css/owl.css">
 
     <!--우리 사이트용 추가 CSS-->
     <!--WYSWYG 링크-->
@@ -29,16 +34,16 @@
     <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block navbar-klean" data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container">
-                <a class="navbar-brand" href="index.html"> <img class="me-3 d-inline-block" src="~/themes/klean/public/assets/img/gallery/logo.png" alt="" /></a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> <img class="me-3 d-inline-block" src="~/themes/klean/public/assets/img/gallery/logo.png" alt="" /></a>
+                
                 <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link fw-medium active" aria-current="page">홈</a>
+                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#portfolio">포트폴리오</a></li>
                         <li class="nav-item px-2" data-anchor="data-anchor">
-                            <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link fw-medium active" aria-current="page">Home</a>
+                            <a class="nav-link" href="#board">게시판</a>
                         </li>
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#board">Board</a></li>
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">문의</a></li>
                     </ul>
                     <form class="ps-lg-5">
                         <button class="btn btn-link text-primary fw-bold order-1 order-lg-0" type="button">Sign in</button>

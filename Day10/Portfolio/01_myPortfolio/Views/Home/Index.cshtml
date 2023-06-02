@@ -1,7 +1,9 @@
-﻿
+﻿@model IEnumerable<_01_myPortfolio.Models.PortfolioModel>;
 @{
     ViewData["Title"] = "Home";
 }
+
+<partial name="_Notification" />
 
 <!-- 홈 영역 -->
 <section id="home">
@@ -43,37 +45,104 @@
 
         <div class="row justify-content-center mb-6">
             <div class="col-lg-6 text-center mx-auto mb-7">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Our Team</h5>
-                <p class="mb-0">People from various origins, cultures, and personalities make up our team. This blend makes it a powerful team</p>
+                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">포트폴리오</h5>
+                <p class="mb-0">포트폴리오를 감상하세요!</p>
             </div>
         </div>
-    </div>
 
-    <div class="col-xxl-9">
-        <div class="row flex-center g-0">
-            <div class="col-sm-6 col-lg-3 text-center">
-                <div class="wrapper shadow-square-right"><img class="team-card-1" src="assets/img/gallery/john.png" width="200" alt="..."></div>
-                <h5 class="text-800 fw-bold mt-4 mb-1">John Adams</h5>
-                <p>Ceo</p>
-            </div>
-            <div class="col-sm-6 col-lg-3 text-center">
-                <div class="wrapper shadow-square-left"><img class="team-card-2" src="assets/img/gallery/carrey.png" width="200" alt="..."></div>
-                <h5 class="text-800 fw-bold mt-4 mb-1">Carrey Johnson</h5>
-                <p>Senior Developer</p>
-            </div>
-            <div class="col-sm-6 col-lg-3 text-center">
-                <div class="wrapper shadow-square-right"><img class="team-card-3" src="assets/img/gallery/ray.png" width="200" alt="..."></div>
-                <h5 class="text-800 fw-bold mt-4 mb-1">Ray Marie</h5>
-                <p>Developer</p>
-            </div>
-            <div class="col-sm-6 col-lg-3 text-center">
-                <div class="wrapper shadow-square-left"><img class="team-card-4" src="assets/img/gallery/austin.png" width="200" alt="..."></div>
-                <h5 class="text-800 fw-bold mt-4 mb-1">Austin Min</h5>
-                <p>Designer</p>
-            </div>
-        </div>
-    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="owl-features owl-carousel owl-loaded owl-drag">
 
+                        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="loop owl-carousel">
+                                        @if (Model.Count() > 0)
+                                        {
+                                            var loop = 1;
+                                            foreach (var item in Model)
+                                            {
+                                                if (loop % 2 == 1)
+                                                {
+                                                    // 홀수이면
+                                                    @Html.Raw("<div class='item'>")
+                                                    ;
+                                                }
+
+                                                // 동적으로 포트폴리오 이미지 객체를 만들어주는 부분
+                                                @Html.Raw("<div class='portfolio-item'>" +
+                                        "<div class='thumb'>" +
+                                        $"<img src='/uploads/{item.FileName}' width='445' height='305'>" +
+                                        "<div class='hover-content'>" +
+                                        "<div class='inner-content'>" +
+                                        $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
+                                        $"<span>{item.Description}</span>" +
+                                        "</div>" +
+                                        "</div>" +
+                                        "</div>" +
+                                        "</div>")
+                                                ;
+
+                                                if (loop % 2 == 0)
+                                                {
+                                                    // 짝수이면
+                                                    @Html.Raw("</div>")
+                                                    ;
+                                                }
+
+                                                loop++;
+                                            }
+                                        }
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+       @* <div class="container-fulid">
+            <div class="row flex-center g-0">
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <div class="wrapper shadow-square-right">
+                        <div class="loop owl-carousel">
+                            @if (Model.Count() > 0)
+                            {
+                                var loop = 1;
+                                foreach (var item in Model)
+                                {
+                                    @Html.Raw("<div class='item'>")
+                                    ;
+                                    @Html.Raw("<div class='portfolio-item'>" +
+                            "<div class='thumb'>" +
+                            $"<img src='/uploads/{item.FileName}' width='445' height='305'>" +
+                            "<div class='hover-content'>" +
+                            "<div class='inner-content'>" +
+                            $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
+                            $"<span>{item.Description}</span>" +
+                            "</div>" +
+                            "</div>" +
+                            "</div>" +
+                            "</div>")
+                                    ;
+
+                                    @Html.Raw("</div>")
+                                    ;
+                                    loop++;
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>*@
 </section>
  
 
@@ -135,8 +204,8 @@
 
         <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center mb-6">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Blog post</h5>
-                <p class="mb-0">Blogs are a great method to increase traffic and generate leads. Make a profit. Get compensated for your efforts. </p>
+                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">게시판</h5>
+                <p class="mb-0">다양한 의견을 공유하세요!</p>
             </div>
         </div>
         <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
@@ -203,7 +272,7 @@
                     </div>
 
                     <div class="col-auto mx-auto my-5">
-                        <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit" asp-controller="Board" asp-action="Index"> <span class="text-gradient fw-bold">View all</span></button>
+                        <a class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit" asp-controller="Board" asp-action="Index"> <span class="text-gradient fw-bold">View all</span></a>
                     </div>
                 </div>
             </div>

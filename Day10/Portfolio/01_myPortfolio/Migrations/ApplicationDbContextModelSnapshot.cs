@@ -240,6 +240,40 @@ namespace _01_myPortfolio.Migrations
                     b.ToTable("Boards");
                 });
 
+            modelBuilder.Entity("_01_myPortfolio.Models.PortfolioModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("Varchar(250)")
+                        .HasColumnName("Description");
+
+                    b.Property<string>("Division")
+                        .IsRequired()
+                        .HasColumnType("Varchar(20)")
+                        .HasColumnName("Division");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("Varchar(300)")
+                        .HasColumnName("FileName");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("Varchar(100)")
+                        .HasColumnName("Title");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("Varchar(250)")
+                        .HasColumnName("Url");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Portfolios");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)

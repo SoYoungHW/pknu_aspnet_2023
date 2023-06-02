@@ -8,14 +8,18 @@ namespace _01_myPortfolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _db;
+
+        public HomeController(ApplicationDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var list = _db.Portfolios.Where(q => q.Division == "PORTFOLIO").ToList();
+            return View(list);
         }
 
         public IActionResult Privacy()
