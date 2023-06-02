@@ -6,383 +6,156 @@
 <partial name="_Notification" />
 
 <!-- 홈 영역 -->
-<section id="home">
-    <div class="bg-holder d-none d-md-block bg-size" style="background-image:url(../../wwwroot/themes/klean/public/assets/img/illustrations/hero.png);background-position:right bottom;"></div>
-    <div class="bg-holder" style="background-image:url(../../wwwroot/themes/klean/public/assets/img/illustrations/heroheader-bg.png);background-position:center;background-size:contain;"></div>
-
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
-                <h1 class="fw-bold display-4 fs-4 fs-lg-6 fs-xxl-7 text-gradient"> Bootstrap 5 theme</h1>
-                <h1 class="text-700">crafted by <span class="fw-bold">ThemeWagon</span></h1>
-                <p class="mb-5 fs-0">ThemeWagon offers an wide array of category-oriented <br class="d-none d-lg-block" />
-                          Free and Premium Bootstrap HTML Templates and Themes.</p>
-                <a class="btn hover-top btn-glow btn-klean" href="#">Check Demo</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 아이콘 영역 -->
-<section class="pb-lg-0 pt-md-8 py-0">
-    <div class="container">
-        @*<div class="row align-items-center justify-content-xl-between py-5 border-klean">
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="~/themes/klean/public/assets/img/icons/iot.png" height="100" alt="brands" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="~/themes/klean/public/assets/img/icons/python.png" height="100" alt="brands" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="~/themes/klean/public/assets/img/icons/hashtag.png" height="100" alt="brands" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="~/themes/klean/public/assets/img/icons/raspberry-pi.png" height="100" alt="brands" /></div>
-        </div>*@
-    </div>
-</section>
-
-
-<!-- 포트폴리오 영역 -->
-<section class="pb-0" container="" container-lg-fluid="" container-xl="container container-lg-fluid container-xl" id="portfolio">
-    <div class="container">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/team-bg.png);background-position:left top;background-size:auto;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="row justify-content-center mb-6">
-            <div class="col-lg-6 text-center mx-auto mb-7">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">포트폴리오</h5>
-                <p class="mb-0">포트폴리오를 감상하세요!</p>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="owl-features owl-carousel owl-loaded owl-drag">
-
-                        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="loop owl-carousel">
-                                        @if (Model.Count() > 0)
-                                        {
-                                            var loop = 1;
-                                            foreach (var item in Model)
-                                            {
-                                                if (loop % 2 == 1)
-                                                {
-                                                    // 홀수이면
-                                                    @Html.Raw("<div class='item'>")
-                                                    ;
-                                                }
-
-                                                // 동적으로 포트폴리오 이미지 객체를 만들어주는 부분
-                                                @Html.Raw("<div class='portfolio-item'>" +
-                                        "<div class='thumb'>" +
-                                        $"<img src='/uploads/{item.FileName}' width='445' height='305'>" +
-                                        "<div class='hover-content'>" +
-                                        "<div class='inner-content'>" +
-                                        $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
-                                        $"<span>{item.Description}</span>" +
-                                        "</div>" +
-                                        "</div>" +
-                                        "</div>" +
-                                        "</div>")
-                                                ;
-
-                                                if (loop % 2 == 0)
-                                                {
-                                                    // 짝수이면
-                                                    @Html.Raw("</div>")
-                                                    ;
-                                                }
-
-                                                loop++;
-                                            }
-                                        }
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="container-fluid tm-content-container">
+    <ul class="cd-hero-slider mb-0 py-5">
+        <li class="px-3" data-page-no="1">
+            <div class="page-width-1 page-left">
+                <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
+                    <div class="intro-left tm-bg-dark">
+                        <h2 class="mb-4">Welcome to Astro Motion</h2>
+                        <p class="mb-4">
+                            This HTML template has a motion video background loop which is provided by <a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>. This is
+                            one-page responsive layout for your websites. Feel
+                            free to use this for a commercial purpose.
+                        </p>
+                        <p class="mb-0">
+                            You are not permitted to redistribute this template on your Free CSS collection websites. Please <a rel="nofollow" href="https://templatemo.com/contact" target="_blank">contact us</a> for more information.
+                        </p>
                     </div>
+                    <div class="intro-right">
+                        <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
+                        <img src="img/home-img-2.jpg" alt="Image" class="img-fluid intro-img-2">
+                    </div>
+                    <div class="circle intro-circle-1"></div>
+                    <div class="circle intro-circle-2"></div>
+                    <div class="circle intro-circle-3"></div>
+                    <div class="circle intro-circle-4"></div>
                 </div>
-
-                    </div>
+                <div class="text-center">
+                    <a href="#0" data-page-no="2" class="btn btn-primary tm-intro-btn tm-page-link">
+                        View Gallery
+                    </a>
                 </div>
             </div>
+        </li>
 
+        <!-- 포트폴리오 영역 -->
+        <li data-page-no="2">
+            <!-- Image Carousel -->
+            <div class="mx-auto position-relative gallery-container">
+                <div class="circle intro-circle-1"></div>
+                <div class="circle intro-circle-2"></div>
+                <div class="mx-auto tm-border-top gallery-slider">
 
-       @* <div class="container-fulid">
-            <div class="row flex-center g-0">
-                <div class="col-sm-6 col-lg-3 text-center">
-                    <div class="wrapper shadow-square-right">
-                        <div class="loop owl-carousel">
-                            @if (Model.Count() > 0)
+                    
+
+                        @if (Model.Count() > 0)
+                        {
+                            var loop = 1;
+                            foreach (var item in Model)
                             {
-                                var loop = 1;
-                                foreach (var item in Model)
-                                {
-                                    @Html.Raw("<div class='item'>")
-                                    ;
-                                    @Html.Raw("<div class='portfolio-item'>" +
-                            "<div class='thumb'>" +
-                            $"<img src='/uploads/{item.FileName}' width='445' height='305'>" +
-                            "<div class='hover-content'>" +
-                            "<div class='inner-content'>" +
-                            $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
-                            $"<span>{item.Description}</span>" +
-                            "</div>" +
-                            "</div>" +
-                            "</div>" +
-                            "</div>")
-                                    ;
+                                
+                                    // 홀수이면
+                                @Html.Raw("<figure class='effect-julia item'>");
+                                
 
-                                    @Html.Raw("</div>")
+                                // 동적으로 포트폴리오 이미지 객체를 만들어주는 부분
+                                @Html.Raw("<div class='portfolio-item'>" +
+                        "<div class='thumb'>" +
+                        $"<img src='/uploads/{item.FileName}' width='800' height='305'>" +
+                        "<div class='hover-content'>" +
+                        "<div class='inner-content'>" +
+                        $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
+                        $"<span>{item.Description}</span>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>")
+                                ;
+
+                                
+                                    // 짝수이면
+                                @Html.Raw(" </figure>")
                                     ;
-                                    loop++;
-                                }
+                            
+
+                                loop++;
                             }
-                        </div>
-                    </div>
+                        }
+                   
                 </div>
             </div>
-            </div>
-        </div>*@
-</section>
- 
+        </li>
 
-
-<!-- 포트폴리오 상세 영역 -->
-
-<section class="py-5">
-    <div class="bg-holder" style="background-image:url(assets/img/illustrations/testimonial-bg-1.png);background-position:center;background-size:cover;"></div>
-    <div class="bg-holder" 
-         style="background-image:url(assets/img/illustrations/testimonial-bg.png);background-position:right top;background-size:auto;margin-top:-43px;margin-left:-200px;"></div>
-
-    <div class="container-xxl">
-        <div class="row flex-center h-100 circle-blend circle-blend-left circle-pink" style="z-index:1;">
-            <div class="col-xl-11 circle-blend circle-blend-right circle-cyan">
-                <div class="carousel slide" id="carouselTestimonials" data-bs-ride="carousel">
-                    <div class="carousel-inner ps-sm-7 pb-sm-7 ps-md-5 ps-lg-7 pb-lg-7">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <div class="row h-100 align-items-center">
-                                <div class="col-auto">
-                                    <div class="wrapper shadow-square-left-bottom">
-                                        <div class="card testimonial-card-bg h-100">
-                                            <div class="card-body h-100 p-4">
-                                                <img class="border-klean-gradient" src="assets/img/gallery/testimonial.png" alt="testimonials" width="315" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-lg-6 col-xl-7 mb-4 ms-xxl-auto">
-                                    <img class="img-fluid" src="assets/img/gallery/quotation.png" alt="testimonials-bg" />
-                                    <h5 class="fw-bold text-gradient fs-4 mt-4">Outstanding!!</h5>
-                                    <p class="mt-4 pe-xxl-8">
-                                        I just wanted to drop you a little email to say thank you for all your hard work. I'm delighted I chose you as my partner. Your websites are quite                                           simple to edit and maintain, which is fantastic.
-                                    </p>
-                                    <button class="btn btn-lg btn-klean-outline order-0" type="submit"><span class="fw-bold text-gradient">Read More</span></button>
-                                    <h6 class="fw-bold fs-lg-1">Daniel Lane,<span class="ms-2 fw-normal text-400 fs--1">Developer</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!--Board-->
+        <li data-page-no="3" class="px-3">
+            <div class="position-relative page-width-1 page-right tm-border-top tm-border-bottom">
+                <div class="circle intro-circle-1"></div>
+                <div class="circle intro-circle-2"></div>
+                <div class="circle intro-circle-3"></div>
+                <div class="circle intro-circle-4"></div>
+                <div class="tm-bg-dark content-pad">
+                    <h2 class="mb-4">About our company</h2>
+                    <p class="mb-4">
+                        You are <span class="highlight">allowed</span> to use Astro Motion HTML Template for your websites. You are not allowed to re-distribute this template ZIP file on any Free CSS template collection website. Illegal redistribution is strongly prohibited.
+                    </p>
+                    <p>
+                        Praesent auctor rhoncus arcu, vitae blandit est vestibulum sit amet. Integer erat
+                        turpis, vestibulum pellentesque aliquam ultricies, finibus nec dui. Donec bibendum
+                        enim mi, at tristique leo feugiat at. Thank you for visiting Template Mo.
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </li>
 
-
-
-<!-- 게시판 영역 -->
-<section class="py-5" id="board">
-
-    <div class="container container-md-fluid">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/blog-bg.png);background-position:left top;background-size:auto;margin-top:-23px;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/blog-bg-1.png);background-position:right bottom;background-size:auto;margin-top:-66px;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="row">
-            <div class="col-lg-7 col-xxl-5 mx-auto text-center mb-6">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">게시판</h5>
-                <p class="mb-0">다양한 의견을 공유하세요!</p>
-            </div>
-        </div>
-        <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
-            <div class="col-12">
-                <div class="row align-items-center circle-blend circle-blend-right circle-warning">
-                    <div class="col-md-6 col-lg-4 mb-4 undefined">
-                        <div class="card card-bg p-3 h-100">
-                            <div class="card-body">
-                                <h6 class="text-gradient fs--1 fw-bold">Article</h6>
-                                <hr class="text-100" />
-                                <h5 class="fw-bold lh-base fs-1 text-700">How do you use social media for growing traffic and sales?</h5>
-                                <div class="d-flex align-items-center">
-                                    <img class="me-3 me-md-3" src="assets/img/gallery/author-1.png" alt="blog" />
-                                    <div class="my-3 fs--1">
-                                        <p class="mb-0 fw-bold">Jessica Parker</p>
-                                        <p class="fw-normal mb-0">May, 2020 .<span>5 mins read</span></p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mt-4 fs--1">
-                                  <!--조회수아이콘넣을지도모름--> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4 circle-blend circle-blend-left circle-pink">
-                        <div class="card card-bg p-3 h-100">
-                            <div class="card-body">
-                                <h6 class="text-gradient fs--1 fw-bold">lifestyle</h6>
-                                <hr class="text-100" />
-                                <h5 class="fw-bold lh-base fs-1 text-700">Health &amp; fitness for busy people during times of stress</h5>
-                                <div class="d-flex align-items-center">
-                                    <img class="me-3 me-md-3" src="assets/img/gallery/author-2.png" alt="blog" />
-                                    <div class="my-3 fs--1">
-                                        <p class="mb-0 fw-bold">Jason Bourne</p>
-                                        <p class="fw-normal mb-0">May, 2020 .<span>10 mins read</span></p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mt-4 fs--1">
-                                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4 undefined">
-                        <div class="card card-bg p-3 h-100">
-                            <div class="card-body">
-                                <h6 class="text-gradient fs--1 fw-bold">CEO/office</h6>
-                                <hr class="text-100" />
-                                <h5 class="fw-bold lh-base fs-1 text-700">QR codes- innovative ways to use them in small business</h5>
-                                <div class="d-flex align-items-center">
-                                    <img class="me-3 me-md-3" src="assets/img/gallery/author-3.png" alt="blog" />
-                                    <div class="my-3 fs--1">
-                                        <p class="mb-0 fw-bold">Wanda Maximoff</p>
-                                        <p class="fw-normal mb-0">May, 2020 .<span>7 mins read</span></p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mt-4 fs--1">
-                                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-auto mx-auto my-5">
-                        <a class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit" asp-controller="Board" asp-action="Index"> <span class="text-gradient fw-bold">View all</span></a>
+        <!--Contact-->
+        <li data-page-no="4">
+            <div class="mx-auto page-width-2">
+                <div class="row">
+                    <div class="col-md-6 me-0 ms-auto">
+                        <h2 class="mb-4">Contact Us</h2>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- 컨텍트 영역 -->
-<section class="py-0" id="contact">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-xxl-5 mx-auto text-center mt-5">
-                <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-5">Contact Us</h5>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 mb-8">
-    <div class="bg-holder" style="background-image:url(assets/img/illustrations/contact-us-bg.png);background-position:left bottom;background-size:auto;"></div>
-    <div class="bg-holder" style="background-image:url(assets/img/gallery/contact-bg.png);background-position:center right ;background-size:contain;"></div>
-  
-    <div class="container">
-        <div class="row flex-center">
-            <div class="col-lg-5 mb-5">
-                <div class="card card-bg p-2">
-                    <div class="card-body">
-                        <form>
-                            <div class="row mb-3 input-group-icon">
-                                <label class="col-sm-2 col-form-label visually-hidden" for="inputName">Name</label>
-                                <div class="col-sm-12">
-                                    <input class="form-control rounded-pill border-white input-box" id="inputName" type="text" placeholder="Write your name" />
-                                    <svg class="bi bi-person-fill input-box-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
-                                    </svg>
-                                </div>
+                <div class="row">
+                    <div class="col-md-6 tm-contact-left">
+                        <form action="#" method="POST" class="contact-form">
+                            <div class="input-group tm-mb-30">
+                                <input name="name" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Name">
                             </div>
-                            <div class="row mb-3 input-group-icon">
-                                <label class="col-sm-2 col-form-label visually-hidden" for="inputEmail3">Email</label>
-                                <div class="col-sm-12">
-                                    <input class="form-control rounded-pill border-white input-box" id="inputEmail3" type="email" placeholder="Write your email" />
-                                    <svg class="bi bi-envelope-fill input-box-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2                                                     14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"></path>
-                                    </svg>
-                                </div>
+                            <div class="input-group tm-mb-30">
+                                <input name="email" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Email">
                             </div>
-                            <div class="row mb-3 input-group-text-icon">
-                                <label class="col-sm-2 col-form-label visually-hidden" for="floatingTextarea2">Comments</label>
-                                <div class="col-sm-12">
-                                    <textarea class="form-control rounded-3 border-white input-box" id="floatingTextarea2" placeholder="Write your message" style="height: 150px"></textarea>
-                                    <svg class="bi bi-pencil-fill input-box-text-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0                                                            1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0                                                          0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0                                                         0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
-                                    </svg>
-                                </div>
+                            <div class="input-group tm-mb-30">
+                                <textarea rows="5" name="message" class="textarea form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Message"></textarea>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="d-grid">
-                                        <button class="btn hover-top btn-glow btn-klean rounded-pill" type="submit">Submit </button>
-                                    </div>
-                                </div>
+                            <div class="input-group justify-content-end">
+                                <input type="submit" class="btn btn-primary tm-btn-pad-2" value="Send">
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-5 offset-lg-1">
-                <div class="d-flex align-items-center mb-5">
-                    <div class="icon icon-primary"><span data-feather="phone"></span></div>
-                    <div class="flex-1 ms-3">
-                        <p class="fw-bold mb-0">Phone </p>
-                        <p>+880124332334</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-5">
-                    <div class="icon icon-primary"><span data-feather="mail"></span></div>
-                    <div class="flex-1 ms-3">
-                        <p class="fw-bold mb-0">Email</p>
-                        <p>something@email.com </p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <div class="icon icon-primary"><span data-feather="map-pin"></span></div>
-                    <div class="flex-1 ms-3">
-                        <p class="fw-bold mb-0">Location</p>
-                        <p>43/A Spooner Street,<br />St laurence, Virginia, <br />Texas</p>
+                    <div class="col-md-6 tm-contact-right">
+                        <p class="mb-4">
+                            Integer erat turpis, vestibulum pellentesque aliquam
+                            ultricies, finibus nec dui. Donec bibendum enim mi,
+                            at tristique leo feugiat at.
+                        </p>
+                        <div>
+                            Email: <a href="mailto:info@company.com" class="tm-link-white">info@company.com</a>
+                        </div>
+                        <div class="tm-mb-45">
+                            Tel: <a href="tel:0100200340" class="tm-link-white">010-020-0340</a>
+                        </div>
+                        <!-- Map -->
+                        <div class="map-outer">
+                            <div class="gmap-canvas">
+                                <iframe width="100%" height="400" id="gmap-canvas"
+                                        src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <hr class="text-100 mb-0" />
-    <div class="row justify-content-md-between justify-content-evenly py-3">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-            <p class="fs--1 my-2 fw-bold">All rights Reserved &copy; Your Company, 2021</p>
-        </div>
-        <div class="col-12 col-sm-8 col-md-6">
-            <p class="fs--1 my-2 text-center text-md-end">
-                Made with&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#EB6453" viewBox="0 0 16 16">
-                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 
-                             0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="fw-bold text-500" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-            </p>
-        </div>
-    </div>
-</section>
-    
+        </li>
+    </ul>
+</div>

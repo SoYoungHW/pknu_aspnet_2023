@@ -1,20 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@ViewData["Title"] - IoT_Portfilo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Motion by TemplateMo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
 
-    <!--Bootstrap 5 CDN-->
-    <link rel="stylesheet" href="~/themes/seo_dream/vendor/bootstrap/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="~/themes/klean/public/assets/css/theme.css" />
-    <link rel="stylesheet" href="~/themes/klean/public/assets/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/animated.css">
-    <link rel="stylesheet" href="~/css/owl.css">
+    <link rel="stylesheet" href="~/themes/astro_motion/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/themes/astro_motion/css/slick.css" type="text/css" />
+    <link rel="stylesheet" href="~/themes/astro_motion/css/templatemo-style.css">
 
     <!--우리 사이트용 추가 CSS-->
     <!--WYSWYG 링크-->
@@ -32,53 +27,74 @@
 
 <body>
     <main class="main" id="top">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block navbar-klean" data-navbar-on-scroll="data-navbar-on-scroll">
-            <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> <img class="me-3 d-inline-block" src="~/themes/klean/public/assets/img/gallery/logo.png" alt="" /></a>
-                
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
-                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link fw-medium active" aria-current="page">홈</a>
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#portfolio">포트폴리오</a></li>
-                        <li class="nav-item px-2" data-anchor="data-anchor">
-                            <a class="nav-link" href="#board">게시판</a>
-                        </li>
-                        <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">문의</a></li>
-                    </ul>
-                    <form class="ps-lg-5">
-                        <button class="btn btn-link text-primary fw-bold order-1 order-lg-0" type="button">Sign in</button>
-                        <button class="btn btn-light shadow-klean order-0" type="submit"><span class="text-gradient fw-bold">Sign Up</span></button>
-                    </form>
+        <video autoplay muted loop id="bg-video">
+            <source src="~/themes/astro_motion/video/gfp-astro-timelapse.mp4" type="video/mp4">
+        </video>
+        <div class="page-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="cd-slider-nav">
+                            <nav class="navbar navbar-expand-lg" id="tm-nav">
+                                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Astro Motion</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbar-supported-content">
+                                    <ul class="navbar-nav mb-2 mb-lg-0">
+                                        <li class="nav-item selected">
+                                            <a class="nav-link" aria-current="page" asp-controller="Home" asp-action="Index" data-no="1">Home</a>
+                                            <div class="circle"></div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#2" data-no="2">Gallery</a>
+                                            <div class="circle"></div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" asp-controller="Board" asp-action="Index" data-no="3">About</a>
+                                            <div class="circle"></div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#0" data-no="4">Contact</a>
+                                            <div class="circle"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </main>
 
-    <div class="container">
+    
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    
+
+    <div class="container-fluid">
+        <footer class="row mx-auto tm-footer">
+            <div class="col-md-6 px-0">
+                Copyright 2021 Astro Motion Company Limited. All rights reserved.
+            </div>
+            <div class="col-md-6 px-0 tm-footer-right">
+                Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank" class="tm-link-white">TemplateMo</a>
+            </div>
+        </footer>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - _01_myPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
         @*<script src="vendors/@popperjs/popper.min.js"></script>*@
-    <script src="~/themes/klean/public/vendors/popperjs/popper.min.js"></script>
-    <script src="~/themes/klean/public/vendors/is/is.min.js"></script>
-    <script src="~/themes/klean/public/vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="~/themes/klean/public/vendors/feather-icons/feather.min.js"></script>
-
-    <script>
-        feather.replace();
-    </script>
-    <script src="~/themes/klean/public/assets/js/theme.js"></script>
-    <script src="~/js/owl.carousel.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <script src="~/themes/astro_motion/js/jquery-3.5.1.min.js"></script>
+    <script src="~/themes/astro_motion/js/bootstrap.min.js"></script>
+    <script src="~/themes/astro_motion/js/slick.js"></script>
+    <script src="~/themes/astro_motion/js/templatemo-script.js"></script>>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
