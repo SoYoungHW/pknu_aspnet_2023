@@ -1,4 +1,5 @@
 using _01_myPortfolio.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace _01_myPortfolio
@@ -18,6 +19,25 @@ namespace _01_myPortfolio
                 ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
                 ));
 
+            // asp.net 계정사용
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            // 비밀번호 정책변경
+            builder.Services.Configure<IdentityOptions>(Options =>
+            {
+                Options.Password.RequireDigit = false;
+                Options.Password.RequireLowercase = false;
+                Options.Password.RequireUppercase = false;
+                Options.Password.RequireNonAlphanumeric = false;
+                Options.Password.RequiredLength = 4;
+                Options.Password.RequiredUniqueChars = 0;
+            });
+
+            // 권한 설정 추가
+            builder.Services.AddAuthorization();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -33,6 +53,7 @@ namespace _01_myPortfolio
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
