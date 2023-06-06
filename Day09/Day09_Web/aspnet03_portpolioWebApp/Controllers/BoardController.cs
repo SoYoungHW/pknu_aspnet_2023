@@ -57,7 +57,7 @@ namespace aspnet02_boardapp.Controllers
             var StartCount = new MySqlParameter("startCount", startCount);
             var EndCount = new MySqlParameter("endCount", endCount);
 
-            var objBoardList = _db.Boards.FromSql($"CALL New_PagingBoard({StartCount}, {EndCount})").ToList();
+            var objBoardList = _db.Boards.FromSql($"CALL New_PagingBoards({StartCount}, {EndCount})").ToList();
 
             return View(objBoardList);
         }

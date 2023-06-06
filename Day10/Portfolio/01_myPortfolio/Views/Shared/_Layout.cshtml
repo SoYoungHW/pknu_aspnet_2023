@@ -51,20 +51,33 @@
                                             <div class="circle"></div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#3" data-no="3">About</a>
+                                            <a class="nav-link" href="/Board/Index" data-no="3">Board</a>
                                             <div class="circle"></div>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#4" data-no="4">Contact</a>
                                             <div class="circle"></div>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/Account/Login#5">
+                                        @if (signInManager.IsSignedIn(User))
+                                        {
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#5" data-no="5">
                                                 <span class="bi bi-person"></span>
-
                                             </a>
                                             <div class="circle"></div>
-                                        </li>
+                                            </li>
+                                            <form asp-controller="Account" asp-action="Logout">
+                                                <a class="btn btn-outline-secondary">Sign out</a>
+                                            </form>
+                                        }
+                                        else
+                                        { 
+                                            <form>
+                                            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-light">Sign in</a>
+                                            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light">Sign up</a>
+                                            </form>
+                                        }
+
                                     </ul>
                                 </div>
                             </nav>

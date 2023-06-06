@@ -1,6 +1,7 @@
 ﻿using _01_myPortfolio.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 
 namespace _01_myPortfolio.Controllers
@@ -87,5 +88,66 @@ namespace _01_myPortfolio.Controllers
             
             return View(model);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            TempData["succeed"] = "로그아웃";
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Profile(string userName)
+        {
+            ViewData["NoScroll"] = "true"; // 게시판은 메인스크롤X
+            Debug.WriteLine(userName);
+            var curUser = await _userManager.FindByNameAsync(userName);
+
+            if (curUser == null)
+            {
+                TempData["error"] = "사용자가 없습니다";
+                return RedirectToAction("Index", "Home");
+            }
+
+            var model = new RegisterModel()
+            {
+                UserId = curUser.UserName,
+                Email = curUser.Email,
+                PhoneNumber = curUser.PhoneNumber,
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Profile(RegisterModel model)
+        {
+            var user = await _userManager.FindByNameAsync(model.UserId); // new가 아님
+
+            user.UserName = model.UserId;
+            user.Email = model.Email;
+            user.PhoneNumber = model.PhoneNumber;
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, model.Password); // 비밀번호 변경(어렵다..!)
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+                TempData["succeed"] = "프로필변경 성공했습니다.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model); // 프로필 변경을 실패하면 그 화면 그대로 유지
+        }
+
     }
 }

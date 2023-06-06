@@ -253,7 +253,7 @@ h2 {
 
 /* Gallery page */
 .gallery-container {
-    max-width: 1300px;
+    max-width: 1500px;
 }
 
 .slick-dots {
@@ -265,7 +265,7 @@ h2 {
 	float: left;
     overflow: hidden;
     margin: 0;
-    max-width: 240px;
+    width: 500px;
     margin-left: 10px;
     margin-right: 10px;
 	height: auto;
