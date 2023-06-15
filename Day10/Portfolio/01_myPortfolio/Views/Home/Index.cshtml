@@ -15,17 +15,13 @@
                     <div class="intro-left tm-bg-dark">
                         <h2 class="mb-4">IoT Portfolio</h2>
                         <p class="mb-4">
-                            This HTML template has a motion video background loop which is provided by <a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>. This is
-                            one-page responsive layout for your websites. Feel
-                            free to use this for a commercial purpose.
+                            포트폴리오를 감상하세요!
                         </p>
                         <p class="mb-0">
-                            You are not permitted to redistribute this template on your Free CSS collection websites. Please <a rel="nofollow" href="https://templatemo.com/contact" target="_blank">contact us</a> for more information.
+                            더 많은 자료를 <a rel="nofollow" href="https://https://github.com/SoYoungHW" target="_blank">github</a> 에서 확인하세요!
                         </p>
                     </div>
                     <div class="intro-right">
-                        <img src="img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
-                        <img src="img/home-img-2.jpg" alt="Image" class="img-fluid intro-img-2">
                     </div>
                     <div class="circle intro-circle-1"></div>
                     <div class="circle intro-circle-2"></div>
@@ -43,7 +39,7 @@
         <!-- 포트폴리오 영역 -->
         <li data-page-no="2">
             <!-- Image Carousel -->
-            <div class="mx-auto position-relative gallery-container">
+            <div class="mx-auto position-relative gallery-container mt-5">
                 <div class="circle intro-circle-1"></div>
                 <div class="circle intro-circle-2"></div>
                 <div class="mx-auto tm-border-top gallery-slider">
@@ -61,20 +57,18 @@
 
                                 // 동적으로 포트폴리오 이미지 객체를 만들어주는 부분
                                 @Html.Raw("<div class='portfolio-item'>" +
-                        "<div class='thumb'>" +
-                        $"<img src='/uploads/{item.FileName}' width='500' height='305'>" +
-                        "<div class='hover-content'>" +
-                        "<div class='inner-content'>" +
-                        $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
-                        $"<span>{item.Description}</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>")
-                                ;
+                                            "<div class='thumb'>" +
+                                                $"<img src='/uploads/{item.FileName}' width='500' height='305'>" +
+                                                  "<div class='hover-content'>" +
+                                                  "<div class='inner-content'>" +
+                                                 $"<a href='{item.Url}' target='_blank'><h4>{item.Title}</h4></a>" +
+                                            $"<span>{item.Description}</span>" +
+                                            "</div>" +
+                                            "</div>" +
+                                            "</div>" +
+                                            "</div>");
 
-                                @Html.Raw(" </figure>")
-                                    ;
+                                @Html.Raw(" </figure>");
 
                                 loop++;
                             }

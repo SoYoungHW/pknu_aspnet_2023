@@ -8,13 +8,13 @@
     <div class="container p-3">
         <div class="row pt-4">
             <div class="col-8">
-                <h4 class="text-primary">게시판 글삭제</h4>
+                <h4 class="text-light">게시판 글삭제</h4>
             </div>
             <div class="col-4 text-end">
             </div>
             <div class="row">
                 <div class="col">
-                    <h5 action="text-warning">삭제하시겠습니까?</h5>
+                    <h5 class="text-warning">삭제하시겠습니까?</h5>
                 </div>
             </div>
         </div>
@@ -42,10 +42,10 @@
                         </p>
                     </div><br />
                     <div class="form-group">
-                        <button type="submit" value="삭제" class="btn btn-danger">
+                        <button type="submit" value="삭제" class="btn btn-outline-warning">
                             삭제
                         </button>
-                        <a asp-controller="Board" asp-action="Index" class="btn btn-secondary">
+                        <a asp-controller="Board" asp-action="Index" class="btn btn-outline-light">
                             목록
                         </a>
                     </div>

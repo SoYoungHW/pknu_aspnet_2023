@@ -8,7 +8,7 @@
     <div class="container p-3">
         <div class="row pt-4">
             <div class="col-8">
-                <h4 class="text-primary">게시판 글수정</h4>
+                <h4 class="text-light">게시판 글수정</h4>
             </div>
             <div class="col-4 text-end">
             </div>
@@ -24,7 +24,7 @@
                     <input type="hidden" asp-for="UserId" />
                     <div class="form-group">
                         <label asp-for="UserId" class="control-label"></label>
-                        <input asp-for="UserId" class="form-control" />
+                        <input asp-for="UserId" class="form-control m-md-1" />
                         <span asp-validation-for="UserId" class="text-danger"></span>
                     </div><br />
                     <div class="form-group">
@@ -38,10 +38,10 @@
                         <span asp-validation-for="Content" class="text-danger"></span>
                     </div><br />
                     <div class="form-group">
-                        <button type="submit" value="저장" class="btn btn-primary">
+                        <button type="submit" value="저장" class="btn btn-outline-light">
                             저장
                         </button>
-                        <a asp-controller="Board" asp-action="Index" class="btn btn-secondary">
+                        <a asp-controller="Board" asp-action="Index" class="btn btn-outline-light">
                             목록
                         </a>
                     </div>
