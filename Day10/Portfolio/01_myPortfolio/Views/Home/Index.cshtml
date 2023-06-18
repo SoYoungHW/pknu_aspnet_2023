@@ -1,4 +1,5 @@
-﻿@model IEnumerable<_01_myPortfolio.Models.PortfolioModel>
+﻿
+@model IEnumerable<_01_myPortfolio.Models.PortfolioModel>
             
 @{
     ViewData["Title"] = "Home";
@@ -18,7 +19,7 @@
                             포트폴리오를 감상하세요!
                         </p>
                         <p class="mb-0">
-                            더 많은 자료를 <a rel="nofollow" href="https://https://github.com/SoYoungHW" target="_blank">github</a> 에서 확인하세요!
+                            더 많은 자료를 <a rel="nofollow" href="https://github.com/SoYoungHW" target="_blank">github</a> 에서 확인하세요!
                         </p>
                     </div>
                     <div class="intro-right">
@@ -30,7 +31,7 @@
                 </div>
                 <div class="text-center">
                     <a href="#0" data-page-no="2" class="btn btn-primary tm-intro-btn tm-page-link">
-                        View Gallery
+                        View Portfolio
                     </a>
                 </div>
             </div>
@@ -43,13 +44,10 @@
                 <div class="circle intro-circle-1"></div>
                 <div class="circle intro-circle-2"></div>
                 <div class="mx-auto tm-border-top gallery-slider">
-
-                    
-
                         @if (Model.Count() > 0)
                         {
                             var loop = 1;
-                            foreach (var item in Model)
+                            foreach (var item in Model.ToList())
                             {
                                 
                                 @Html.Raw("<figure class='effect-julia item' style='width: 500px'>");
@@ -79,7 +77,7 @@
         </li>
 
         <!--Board-->
-        <li data-page-no="3" class="px-3">
+        @*<li data-page-no="3" class="px-3">
             <div class="position-relative page-width-1 page-right tm-border-top tm-border-bottom">
                 <div class="circle intro-circle-1"></div>
                 <div class="circle intro-circle-2"></div>
@@ -97,7 +95,7 @@
                     </p>
                 </div>
             </div>
-        </li>
+        </li>*@
 
         <!--Contact-->
         <li data-page-no="4">
@@ -150,32 +148,4 @@
         </li>
 
         <!-- 마이페이지-->
-        <li class="px-3" data-page-no="5">
-            <div class="page-width-1 page-right">
-                <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
-                    <div class="intro-right tm-bg-dark">
-                        <h2 class="mb-4">Welcome to </h2>
-
-                    </div>
-                    <div class="intro-left">
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <form>
-            <a class="btn btn-light" asp-controller="Admin" asp-action="ListRoles">권한목록</a>
-                                <a class="btn btn-light" asp-controller="Portfolio" asp-action="Index">포폴관리</a>
-                </form>
-                        }
-        
-            <a class="btn btn-sm btn-outline-light" asp-action="Profile" asp-controller="Account"
-               asp-route-userName="@userManager.GetUserName(User)">프로필 수정</a>
-        
-                    </div>
-                    <div class="circle intro-circle-1"></div>
-                    <div class="circle intro-circle-2"></div>
-                    <div class="circle intro-circle-3"></div>
-                    <div class="circle intro-circle-4"></div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
+      

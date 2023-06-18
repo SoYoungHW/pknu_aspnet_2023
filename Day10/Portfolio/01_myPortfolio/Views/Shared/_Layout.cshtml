@@ -47,7 +47,7 @@
                                             <div class="circle"></div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#2" data-no="2">Gallery</a>
+                                            <a class="nav-link" href="#2" data-no="2">Potyfolio</a>
                                             <div class="circle"></div>
                                         </li>
                                         <li class="nav-item">
@@ -60,14 +60,16 @@
                                         </li>
                                         @if (signInManager.IsSignedIn(User))
                                         {
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#5" data-no="5">
-                                                <span class="bi bi-person"></span>
-                                            </a>
-                                            <div class="circle"></div>
-                                            </li>
-                                            <form asp-controller="Account" asp-action="Logout">
-                                                <a class="btn btn-outline-secondary">Sign out</a>
+                                            @*<div class="dropstart">
+                                                <a class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ul class="dropdown-menu text-small shadow">
+                                                    <li><a class="dropdown-item" asp-controller="Portfolio" asp-action="Index">포폴관리</a></li>
+                                                    <li><a class="dropdown-item" asp-action="Profile" asp-controller="Account" 
+                                                     asp-route-userName="@userManager.GetUserName(User)">프로필</a></li>
+                                            <a/>
+                                                 </div>*@
+                                            <form asp-controller="Account" asp-action="Logout" method="post">
+                                                <button class="btn btn-outline-secondary" type="submit">Sign out</button>
                                             </form>
                                         }
                                         else
